@@ -1,0 +1,28 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "registry": "https://registry.npmjs.org/",
+  "useWorkspaces": true,
+  "packages": ["docs", "packages/*"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish"
+    },
+    "version": {
+      "conventialCommits": true
+    }
+  },
+  "ignoreChanges": [
+    "**/CHANGELOG.md",
+    "**/node_modules/**",
+    "**/package.json",
+    "**/*.md",
+    "**/*.mdx",
+    "**/*.stories.js",
+    "**/dist/**"
+  ]
+}
